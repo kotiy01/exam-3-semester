@@ -6,18 +6,21 @@
 </template>
 
 <script>
-import tasks from '../mocks/tasks'
 export default {
-    data() {
-        return {
-            task: null
-        }
-    },
-    created() {
-        const task = tasks.find(task => task.id == this.$route.params.id)
-        if (task) {
-            this.task = task
-        }
-    }
+    // data: () => ({
+    //     task: null
+    // }),
+    // props: {
+    //     tasks: {
+    //         type: Array,
+    //         default: () => []
+    //     }
+    // },
+    // created() {
+    //     const task = tasks.find(task => task.id == this.$route.params.id)
+    //     if (task) {
+    //         this.task = task
+    //     }
+    // }
 }
 </script>

@@ -52,7 +52,7 @@ export default {
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
-    color: #FFFFFF;
+    color: black;
     border: 1px solid #66BFFF;
     border-radius: 4px;
     background-color: #66BFFF;

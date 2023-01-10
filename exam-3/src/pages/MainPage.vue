@@ -5,15 +5,23 @@
 </template>
 
 <script>
-import TasksList from '../components/TasksList'
-import tasks from '../mocks/tasks'
+import TasksList from "../components/TasksList"
 
 export default {
-    components: { TasksList },
-    data() {
-        return {
-            tasks
+    data: () => ({
+        tasks: []
+    }),
+    mounted() {
+        this.fetchTodo()
+    },
+    methods: {
+        fetchTodo() {
+            this.axios.get(`https://my-json-server.typicode.com/kotiy01/json-files/tasks`)
+                .then(response => this.tasks = response.data)
         }
+    },
+    components: {
+        TasksList
     }
 }
 </script>
